@@ -1,0 +1,275 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>DnD App</title>
+    <meta name="description" content="A simple DnD application.">
+    <meta name="Andrew Shoemaker" content="DnD">
+
+    <!--
+    <meta property="og:title" content="A Basic HTML5 Template">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.sitepoint.com/a-basic-html5-template/">
+    <meta property="og:description" content="A simple HTML5 Template for new projects.">
+    <meta property="og:image" content="image.png"> 
+    -->
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <link rel="stylesheet" href="\css\styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+
+  <body>
+      
+    <!-- Page Content -->
+    <div class="main">
+      <form>
+          <div class="wrapper">
+            <button class="Barbarian" type="submit" formaction="\classes\Barbarian.html"></button>
+            <button class="Bard" type="submit" formaction="\classes\Bard.html"></button>
+            <button class="Cleric" type="submit" formaction="\classes\Cleric.html"></button>
+            <button class="Druid" type="submit" formaction="\classes\Druid.html"></button>
+            <button class="Fighter" type="submit" formaction="\classes\Fighter.html"></button>
+            <button class="Monk" type="submit" formaction="\classes\Monk.html"></button>
+            <button class="Paladin" type="submit" formaction="\classes\Paladin.html"></button>
+            <button class="Ranger" type="submit" formaction="\classes\Ranger.html"></button>
+            <button class="Rogue" type="submit" formaction="\classes\Rogue.html"></button>
+            <button class="Sorcerer" type="submit" formaction="\classes\Sorcerer.html"></button>
+            <button class="Warlock" type="submit" formaction="\classes\Warlock.html"></button>
+            <button class="Wizard" type="submit" formaction="\classes\Wizard.html"></button>
+          </div>          
+      </form>
+      
+      <aside class="intro">
+          <p>The relentless combatant, fueled by fury or it's totem bonds with animals. In tune with the natural order.</p>
+      </aside>
+
+      <br><br>
+
+      <p>Barbarians come alive in the chaos of combat. They can enter a berserk state where rage takes over, 
+        giving them superhuman strength and resilience. A barbarian can draw on this reservoir of fury only a
+        few times without resting, but those few rages are usually sufficient to defeat whatever threats arise.</p>
+
+      <aside>
+          <br><br><br><br><img id="barbarian-intro-logo" src="https://media-waterdeep.cursecdn.com/avatars/thumbnails/4808/187/340/340/636771210176732976.png">
+      </aside>
+
+      <p>When creating a barbarian character, think about where your character comes from and his or her place in the world.
+        Talk with your DM about an appropriate origin for your barbarian. Did you come from a distant land, making you a stranger 
+        in the area of the campaign? Or is the campaign set in a rough-and-tumble frontier where barbarians are common?
+        What led you to take up the adventuring life? Were you lured to settled lands by the promise of riches? Did you join 
+        forces with soldiers of those lands to face a shared threat? Did monsters or an invading horde drive you out of your 
+        homeland, making you a rootless refugee? Perhaps you were a prisoner of war, brought in chains to “civilized” lands
+        and only now able to win your freedom. Or you might have been cast out from your people because of a crime you 
+        committed, a taboo you violated, or a coup that removed you from a position of authority.</p>
+        
+      <div style="overflow-x:auto;"> <!--I did this to enable horizontal scrolling on small screens -->
+        <table class="barbarian-table">
+          <thead>
+            <tr>
+              <th colspan="1">
+                <h3>Level</h3><br>
+              </th>
+              <th colspan="1">
+                <h3>Proficiency Bonus</h3><br>
+              </th>
+              <th colspan="1">
+                <h3>Features</h3><br>
+              </th>
+              <th colspan="1">
+                <h3>Rages</h3><br>
+              </th>
+              <th colspan="1">
+                  <h3>Rage Damage</h3><br>
+                </th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+              <td>1st</td>
+              <td>+2</td>
+              <td>Rage, Unarmored Defense</td>
+              <td>2</td>
+              <td>+2</td>
+            </tr>
+            <tr>
+              <td>2nd</td>
+              <td>+2</td>
+              <td>Reckless Attack, Danger Sense</td>
+              <td>2</td>
+              <td>+2</td>
+            </tr>
+            <tr>
+              <td>3rd</td>
+              <td>+2</td>
+              <td>
+                <div>
+                    <a href='#' id="primalPath">Primal Path</a>
+                      <div id="primalPathModal" class="modal">
+                        <!-- Modal content -->
+                        <div class="modal-content">
+                          <span class="close">&times;</span>
+                          <p>At 3rd level, you choose a path that shapes the nature of your rage. The Path of the Berserker 
+                            is detailed at the end of the class description, and additional primal paths are available in 
+                            other sources. Your choice grants you features at 3rd level and again at 6th, 10th, and 14th levels.</p>
+                        </div>
+                      </div>
+                </div>
+              </td>
+              <td>3</td>
+              <td>+2</td>
+            </tr>
+            <tr>
+              <td>4th</td>
+              <td>+3</td>
+              <td>Ability Score Improvement</td>
+              <td>3</td>
+              <td>+2</td>
+            </tr>
+            <tr>
+              <td>5th</td>
+              <td>+3</td>
+              <td>Extra Attack, Fast Movement</td>
+              <td>3</td>
+              <td>+2</td>
+            </tr>
+            <tr>
+              <td>6th</td>
+              <td>+3</td>
+              <td>Path Feature</td>
+              <td>4</td>
+              <td>+2</td>
+            </tr>
+            <tr>
+              <td>7th</td>
+              <td>+3</td>
+              <td>
+                  <div>
+                      <a href='#' id="feralInstinct">Feral Instinct</a>
+                        <div id="feralInstinctModal" class="modal">
+                          <!-- Modal content -->
+                          <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <p>By 7th level, your instincts are so honed that you have advantage on initiative rolls.
+                              <br><br>
+                               Additionally, if you are surprised at the beginning of combat and aren’t incapacitated, 
+                              you can act normally on your first turn, but only if you enter your rage before doing 
+                              anything else on that turn.</p>
+                          </div>
+                        </div>
+                  </div>
+              </td>
+              <td>4</td>
+              <td>+2</td>
+            </tr>
+            <tr>
+              <td>8th</td>
+              <td>+3</td>
+              <td>Ability Score Improvement</td>
+              <td>4</td>
+              <td>+2</td>
+            </tr>
+            <tr>
+              <td>9th</td>
+              <td>+4</td>
+              <td>Brutal Critical (1 die)</td>
+              <td>4</td>
+              <td>+3</td>
+            </tr>
+            <tr>
+              <td>10th</td>
+              <td>+4</td>
+              <td>Path Feature</td>
+              <td>4</td>
+              <td>+3</td>
+            </tr>
+            <tr>
+              <td>11th</td>
+              <td>+4</td>
+              <td>Relentless Rage</td>
+              <td>4</td>
+              <td>+3</td>
+            </tr>
+            <tr>
+              <td>12th</td>
+              <td>+4</td>
+              <td>Ability Score Improvement</td>
+              <td>5</td>
+              <td>+3</td>
+            </tr>
+            <tr>
+              <td>13th</td>
+              <td>+5</td>
+              <td>Brutal Critical (2 dice)</td>
+              <td>5</td>
+              <td>+3</td>
+            </tr>
+            <tr>
+              <td>14th</td>
+              <td>+5</td>
+              <td>Path Feature</td>
+              <td>5</td>
+              <td>+3</td>
+            </tr>
+            <tr>
+              <td>15th</td>
+              <td>+5</td>
+              <td>Persistent Rage</td>
+              <td>5</td>
+              <td>+3</td>
+            </tr>
+            <tr>
+              <td>16th</td>
+              <td>+5</td>
+              <td>Ability Score Improvement</td>
+              <td>5</td>
+              <td>+4</td>
+            </tr>
+            <tr>
+              <td>17th</td>
+              <td>+5</td>
+              <td>Brutal Critical (3 dice)</td>
+              <td>6</td>
+              <td>+4</td>
+            </tr>
+            <tr>
+              <td>18th</td>
+              <td>+5</td>
+              <td>Indomitable Might</td>
+              <td>6</td>
+              <td>+4</td>
+            </tr>
+            <tr>
+              <td>19th</td>
+              <td>+5</td>
+              <td>Indomitable Might</td>
+              <td>6</td>
+              <td>+4</td>
+            </tr>
+            <tr>
+              <td>20th</td>
+              <td>+5</td>
+              <td>Primal Champion</td>
+              <td>Unlimited</td>
+              <td>+4</td>
+            </tr>
+        </tbody>
+        </table>
+        <br><br><br>
+
+      </div>
+
+    </div>
+
+        
+    
+  <script type="text/javascript" src="\js\modals.js"></script>
+  </body>
+ 
+</html>
